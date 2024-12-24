@@ -17,4 +17,4 @@
 
 ## 📝 Notes
 
-- [`react-native-reanimated` docs](https://docs.swmansion.com/react-native-reanimated/)
+* see [`react-native-reanimated` docs](https://docs.swmansion.com/react-native-reanimated/)
