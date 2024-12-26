@@ -15,6 +15,20 @@
 - Run `yarn` or `npm install`
 - Run `yarn start` or `npm run start` to try it out.
 
+## How to run this example?
+
+* `npm run start`
+  * web bundled
+    * open http://localhost:8081/ | your browser
+  * press some option to open it
+    * `i`
+      * | Expo Go, introduce the url, BUT WITH 0.0.0.0 | as your localhost
+        * exp://0.0.0.0:8081
+    * `a`
+      * open quemu-system-aarch64
+        * Problems: ALL black
+          * Solution: TODO:
+
 ## 📝 Notes
 
 * see [`react-native-reanimated` docs](https://docs.swmansion.com/react-native-reanimated/)
