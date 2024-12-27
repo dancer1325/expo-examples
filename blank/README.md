@@ -47,3 +47,7 @@
       * run -- via --
         * XCode
         * Android Studio
+
+
+## Code added
+* [View](https://reactnative.dev/docs/view)
