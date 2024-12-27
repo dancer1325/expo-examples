@@ -8,16 +8,14 @@
   <!-- Web -->
 </p>
 
-## 🚀 How to use
+## 🚀 How was it created?
 
 > `npx create-expo my-app --example with-reanimated`
 
-- Run `yarn` or `npm install`
-- Run `yarn start` or `npm run start` to try it out.
-
 ## How to run this example?
 
-* `npm run start`
+* `npm install` or `yarn`
+* `npm run start` or `yarn start` 
   * web bundled
     * open http://localhost:8081/ | your browser
   * press some option to open it

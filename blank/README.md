@@ -15,29 +15,35 @@
   </a>
 </p>
 
-## 🚀 How to use
+## 🚀 How was it created?
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` or `npm run start` to start the bundler.
-- Open the project in a React runtime to try it:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
+> `npx create-expo my-app`
+
+## How to run this example?
+
+* `npm install` or `yarn`
+  * if you have native iOS code run `npx pod-install`
+* `npm run start` or `yarn start`
+  * web bundled
+    * open http://localhost:8081/ | your browser
+  * press some option to open it 
+    * `i`
+      * | Expo Go, introduce the url, BUT WITH 0.0.0.0 | as your localhost
+        * exp://0.0.0.0:8081
+    * `a`
+      * open quemu-system-aarch64
+        * Problems: ALL black
+          * Solution: TODO:
+  * | physical device
+    * [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
+    * [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
 
 ## Running/Modifying Native Code
 
-You can generate native iOS and Android projects from your Expo config file (**app.json**/ **app.config.js**) by runnning `npx expo prebuild`. These native projects can then be compiled and run via XCode and Android Studio.
-
-> 💡 Learn more about [native code in Expo](https://docs.expo.dev/workflow/customizing/)
-
-## Publishing
-
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.dev/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.dev/distribution/publishing-websites/).
-
-## 📝 Notes
-
-- Learn more about [Universal React](https://docs.expo.dev/).
-- See what API and components are [available in the React runtimes](https://docs.expo.dev/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.dev/guides/).
+* `npx expo prebuild`
+  * 👀generate native iOS and Android projects -- from your -- Expo config file (**app.json**/ **app.config.js**) 👀
+    * uses
+      * compile them
+      * run -- via --
+        * XCode
+        * Android Studio
