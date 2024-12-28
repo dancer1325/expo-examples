@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, Text } from "react-native";
+import React, {useState} from 'react';
+import { View, Text, StyleSheet } from "react-native";
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
-// ONLY 1! export default is allowed
+// 1. ONLY 1! export default is allowed
 /*export default function App() {
   return (
     <View
@@ -17,7 +17,9 @@ import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
   );
 }*/
 
-const ViewBoxesWithColorAndText = () => {
+// 2. View
+// ONLY 1! export default is allowed
+/*const ViewBoxesWithColorAndText = () => {
     return (
         <SafeAreaProvider>
             <SafeAreaView style={{height: 100, flexDirection: 'row'}}>
@@ -28,5 +30,45 @@ const ViewBoxesWithColorAndText = () => {
         </SafeAreaProvider>
     );
 };
+export default ViewBoxesWithColorAndText;*/
 
-export default ViewBoxesWithColorAndText;
+// 3. Text
+// ONLY 1! export default is allowed
+const TextInANest = () => {
+    const [titleText, setTitleText] = useState("Bird's Nest");
+    const bodyText = 'This is not really a bird nest.';
+
+    const onPressTitle = (event ) => {
+        setTitleText("Bird's Nest [pressed]");
+    };
+
+    return (
+        <SafeAreaProvider>
+            <SafeAreaView style={styles.container}>
+                <Text style={styles.baseText}>
+                    <Text style={styles.titleText} onPress={onPressTitle}>
+                        {titleText}
+                        {'\n'}
+                        {'\n'}
+                    </Text>
+                    <Text numberOfLines={5}>{bodyText}</Text>
+                </Text>
+            </SafeAreaView>
+        </SafeAreaProvider>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    baseText: {
+        fontFamily: 'Cochin',
+    },
+    titleText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+});
+
+export default TextInANest;
