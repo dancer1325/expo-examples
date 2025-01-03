@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, TextInput } from "react-native";
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 // 1. ONLY 1! export default is allowed
@@ -75,7 +75,7 @@ export default TextInANest;*/
 
 // 4. Image
 // ONLY 1! export default is allowed
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
@@ -113,4 +113,85 @@ const DisplayAnImage = () => (
     </SafeAreaProvider>
 );
 
-export default DisplayAnImage;
+export default DisplayAnImage;*/
+
+// 5. ScrollView
+/*const logo = {
+    uri: 'https://reactnative.dev/img/tiny_logo.png',
+    width: 64,
+    height: 64,
+};
+
+const App = () => (
+    <ScrollView>
+        <Text style={{fontSize: 96}}>Scroll me plz</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>If you like</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>Scrolling down</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>What's the best</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>Framework around?</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 80}}>React Native</Text>
+    </ScrollView>
+);
+
+export default App;*/
+
+// 6. TextInput
+const TextInputExample = () => {
+    const [text, onChangeText] = React.useState('Useless Text');
+    const [number, onChangeNumber] = React.useState('');
+
+    return (
+        <SafeAreaProvider>
+            <SafeAreaView>
+                <TextInput
+                    style={styles.input}
+                    onChangeText={onChangeText}
+                    value={text}
+                />
+                <TextInput
+                    style={styles.input}
+                    onChangeText={onChangeNumber}
+                    value={number}
+                    placeholder="useless placeholder"
+                    keyboardType="numeric"
+                />
+            </SafeAreaView>
+        </SafeAreaProvider>
+    );
+};
+
+const styles = StyleSheet.create({
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
+});
+
+export default TextInputExample;

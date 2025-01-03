@@ -53,3 +53,5 @@
 * [View](https://reactnative.dev/docs/view)
 * [Text](https://reactnative.dev/docs/text)
 * [Image](https://reactnative.dev/docs/image)
+* [ScrollView](https://reactnative.dev/docs/scrollview)
+* [TextInput](https://reactnative.dev/docs/textinput)
