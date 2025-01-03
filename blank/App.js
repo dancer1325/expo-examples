@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 // 1. ONLY 1! export default is allowed
@@ -34,7 +34,7 @@ export default ViewBoxesWithColorAndText;*/
 
 // 3. Text
 // ONLY 1! export default is allowed
-const TextInANest = () => {
+/*const TextInANest = () => {
     const [titleText, setTitleText] = useState("Bird's Nest");
     const bodyText = 'This is not really a bird nest.';
 
@@ -71,4 +71,46 @@ const styles = StyleSheet.create({
     },
 });
 
-export default TextInANest;
+export default TextInANest;*/
+
+// 4. Image
+// ONLY 1! export default is allowed
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    tinyLogo: {
+        width: 50,
+        height: 50,
+    },
+    logo: {
+        width: 66,
+        height: 58,
+    },
+});
+
+const DisplayAnImage = () => (
+    <SafeAreaProvider>
+        <SafeAreaView style={styles.container}>
+            <Image
+                style={styles.tinyLogo}
+                source={require('./assets/react-native-logo.png')}
+                // @expo/snack-static/react-native-logo.png     ONLY available | Snack projects
+            />
+            <Image
+                style={styles.tinyLogo}
+                source={{
+                    uri: 'https://reactnative.dev/img/tiny_logo.png',
+                }}
+            />
+            <Image
+                style={styles.logo}
+                source={{
+                    uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
+                }}
+            />
+        </SafeAreaView>
+    </SafeAreaProvider>
+);
+
+export default DisplayAnImage;
