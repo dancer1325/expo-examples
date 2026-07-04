@@ -1,0 +1,13 @@
+{
+  "scheme": "acme",
+  "plugins": [
+    "expo-router",
+    "expo-splash-screen",
+    "expo-status-bar"
+  ],
+  "newArchEnabled": true,
+  "userInterfaceStyle": "automatic",
+  "web": {
+    "output": "static"
+  }
+}

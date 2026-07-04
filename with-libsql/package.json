@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "android": "expo run:android",
+    "ios": "expo run:ios"
+  },
+  "dependencies": {
+    "@types/react": "~19.2.14",
+    "expo": "^57.0.1",
+    "expo-sqlite": "~57.0.0",
+    "react": "19.2.3",
+    "react-native": "0.86.0",
+    "typescript": "~6.0.3"
+  }
+}

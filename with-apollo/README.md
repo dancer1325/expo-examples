@@ -9,6 +9,10 @@
   <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
 </p>
 
+## Launch your own
+
+[![Launch with Expo](https://github.com/expo/examples/blob/master/.gh-assets/launch.svg?raw=true)](https://launch.expo.dev/?github=https://github.com/expo/examples/tree/master/with-apollo)
+
 ## 🚀 How to use
 
 - Install with `yarn` or `npm install`.
@@ -18,4 +22,4 @@
 
 - The Apollo configuration lies in the `apollo.js` file.
 - The file also contains an option (with commented code) to pass an authorization token to the API.
-- [Apollo Client Docs](https://www.apollographql.com/docs/react/v3.0-beta/)
+- [Apollo Client Docs](https://www.apollographql.com/docs/react/v3)

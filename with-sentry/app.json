@@ -1,0 +1,18 @@
+{
+  "scheme": "withsentry",
+  "web": {
+    "output": "server"
+  },
+  "plugins": [
+    [
+      "@sentry/react-native/expo",
+      {
+        "url": "https://sentry.io/",
+        "project": "YOUR_PROJECT_NAME",
+        "organization": "YOUR_ORGANIZATION_NAME"
+      }
+    ],
+    "@sentry/react-native",
+    "expo-router"
+  ]
+}

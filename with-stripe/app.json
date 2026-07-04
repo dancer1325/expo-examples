@@ -7,16 +7,11 @@
       }
     },
     "web": {
-      "bundler": "metro",
       "output": "server"
     },
     "plugins": [
-      [
-        "expo-router",
-        {
-          "origin": "https://e"
-        }
-      ],
+      "expo-router",
+      "expo-font",
       [
         "@stripe/stripe-react-native",
         {
@@ -24,7 +19,8 @@
           "publishableKey": "pk_test_qblFNYngBkEdjEZ16jxxoWSM"
         }
       ],
-      "expo-font"
+      "expo-splash-screen",
+      "expo-status-bar"
     ]
   }
 }

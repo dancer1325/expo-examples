@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-widgets",
+        {
+          "widgets": [
+            {
+              "name": "CounterWidget",
+              "contentMarginsDisabled": true,
+              "displayName": "Counter Widget",
+              "description": "A sample counter home screen widget",
+              "supportedFamilies": [
+                "systemSmall",
+                "systemMedium"
+              ]
+            }
+          ]
+        }
+      ],
+      "expo-asset"
+    ]
+  }
+}

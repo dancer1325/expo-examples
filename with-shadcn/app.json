@@ -1,16 +1,27 @@
 {
   "expo": {
-    "scheme": "acme",
-    "userInterfaceStyle": "automatic",
     "orientation": "default",
-    "platforms": [
-      "web"
-    ],
+    "scheme": "acme",
+    "userInterfaceStyle": "light",
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
     "web": {
-      "output": "static"
+      "bundler": "metro",
+      "output": "server"
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
     },
     "plugins": [
-      "expo-router"
+      "expo-asset",
+      "expo-font",
+      "expo-image",
+      "expo-router",
+      "expo-splash-screen",
+      "expo-status-bar"
     ]
   }
 }

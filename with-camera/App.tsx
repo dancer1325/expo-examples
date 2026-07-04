@@ -7,9 +7,9 @@ import {
 import { useRef, useState } from "react";
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
-import { AntDesign } from "@expo/vector-icons";
-import { Feather } from "@expo/vector-icons";
-import { FontAwesome6 } from "@expo/vector-icons";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Feather from "@expo/vector-icons/Feather";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function App() {
   const [permission, requestPermission] = useCameraPermissions();
@@ -36,7 +36,7 @@ export default function App() {
 
   const takePicture = async () => {
     const photo = await ref.current?.takePictureAsync();
-    setUri(photo?.uri);
+    if (photo?.uri) setUri(photo.uri);
   };
 
   const recordVideo = async () => {
@@ -58,7 +58,7 @@ export default function App() {
     setFacing((prev) => (prev === "back" ? "front" : "back"));
   };
 
-  const renderPicture = () => {
+  const renderPicture = (uri: string) => {
     return (
       <View>
         <Image
@@ -73,14 +73,15 @@ export default function App() {
 
   const renderCamera = () => {
     return (
-      <CameraView
-        style={styles.camera}
-        ref={ref}
-        mode={mode}
-        facing={facing}
-        mute={false}
-        responsiveOrientationWhenOrientationLocked
-      >
+      <View style={styles.cameraContainer}>
+        <CameraView
+          style={styles.camera}
+          ref={ref}
+          mode={mode}
+          facing={facing}
+          mute={false}
+          responsiveOrientationWhenOrientationLocked
+        />
         <View style={styles.shutterContainer}>
           <Pressable onPress={toggleMode}>
             {mode === "picture" ? (
@@ -114,13 +115,13 @@ export default function App() {
             <FontAwesome6 name="rotate-left" size={32} color="white" />
           </Pressable>
         </View>
-      </CameraView>
+      </View>
     );
   };
 
   return (
     <View style={styles.container}>
-      {uri ? renderPicture() : renderCamera()}
+      {uri ? renderPicture(uri) : renderCamera()}
     </View>
   );
 }
@@ -132,10 +133,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  camera: {
-    flex: 1,
-    width: "100%",
-  },
+  cameraContainer: StyleSheet.absoluteFillObject,
+  camera: StyleSheet.absoluteFillObject,
   shutterContainer: {
     position: "absolute",
     bottom: 44,

@@ -19,6 +19,12 @@
 
 > `npx create-expo my-app`
 
+## Launch your own
+
+[![Launch with Expo](https://github.com/expo/examples/blob/master/.gh-assets/launch.svg?raw=true)](https://launch.expo.dev/?github=https://github.com/expo/examples/tree/master/blank)
+
+## 🚀 How to use
+
 ## How to run this example?
 
 * `npm install` or `yarn`

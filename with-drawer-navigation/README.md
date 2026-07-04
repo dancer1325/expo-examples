@@ -9,6 +9,10 @@
   <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
 </p>
 
+## Launch your own
+
+[![Launch with Expo](https://github.com/expo/examples/blob/master/.gh-assets/launch.svg?raw=true)](https://launch.expo.dev/?github=https://github.com/expo/examples/tree/master/with-drawer-navigation)
+
 ## 🚀 How to use
 
 - Install with `yarn` or `npm install`.
@@ -17,5 +21,5 @@
 ## 📝 Notes
 
 - This is a very basic example from the [react navigation](https://reactnavigation.org/) docs.
-- [Drawer navigation documentation](https://reactnavigation.org/docs/drawer-based-navigation).
+- [Drawer navigation documentation](https://reactnavigation.org/docs/drawer-navigator).
 - [Reanimated Babel plugin may be required](https://github.com/software-mansion/react-native-reanimated/issues/3410)
